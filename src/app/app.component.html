@@ -1,10 +1,36 @@
+
 <mat-toolbar color="primary" class="navbar">
   <div>Academia - Academic Web Portal</div>
   <div>
-    <span>at8113</span>
+    <span><mat-icon>account_circle  </mat-icon> at8113</span>
   </div>
 </mat-toolbar>
 
-<div>
-  <mat-icon>laptop_windows</mat-icon>
-</div>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/accounts'"> CIRCULAR <mat-icon>laptop_windows</mat-icon></a>
+      <a mat-list-item [routerLink]="'/create-account'"> WELCOME </a>
+      <a mat-list-item [routerLink]="'/contacts'"> Student Profile </a>
+      <a mat-list-item [routerLink]="'/create-contact'"> Academic Reports </a>
+      <a mat-list-item [routerLink]="'/activities'"> Student </a>
+      <a mat-list-item [routerLink]="'/create-activity'"> Unified Time Table </a>
+      <a mat-list-item [routerLink]="'/create-activity'"> Course Feedback </a>
+      <a mat-list-item [routerLink]="'/create-activity'"> New Regulation </a>
+      <a mat-list-item [routerLink]="'/create-activity'"> My Time Table & Attendance </a>
+      <a mat-list-item [routerLink]="'/create-activity'"> Student Service Requests </a>
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- <div>
+  
+</div> -->
