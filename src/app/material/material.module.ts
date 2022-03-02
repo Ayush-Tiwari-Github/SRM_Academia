@@ -15,8 +15,6 @@ const MaterialComponents = [
   MatListModule
 ];
 
-
-
 @NgModule({
   
   imports: [MaterialComponents],
